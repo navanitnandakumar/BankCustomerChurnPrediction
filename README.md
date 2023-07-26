@@ -10,4 +10,4 @@ This project focuses on the analysis and prediction of customer attrition for 'A
 ABC Multinational Bank indicates which customers have left, stayed, or signed up for their service. Multiple important demographics are included for each customer that can help us identify at-risk customers, pain points, and actions to be taken.
 
 
-Deployed app: https://bankcustomerchurnprediction-ns9l10lcj3.streamlit.app/
+Deployed app: https://bankcustomerchurnprediction-t2xuoxltd6.streamlit.app/
