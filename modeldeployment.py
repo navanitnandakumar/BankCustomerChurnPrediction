@@ -7,12 +7,12 @@ Created on Fri Jul 21 08:01:52 2023
 
 #importing required libraries
 import pickle
-import streamlit as st
+#import streamlit as st
 import numpy as np
 
 
 #loading the saved model
-loaded_model = pickle.load(open('final_model.sav', 'rb'))
+loaded_model = pickle.load(open('C:/Users/navan/Documents/BankCustomerChurnPrediction/final_model.sav', 'rb'))
     
 #creating a function for prediction
 def predict(input_data):
@@ -21,15 +21,17 @@ def predict(input_data):
     #reshaping the array
     input_np_rs = input_np.reshape(1,-1)
     prediction = loaded_model.predict(input_np_rs)
-    if(prediction[0] == 0):
+    return(prediction)
+    """if(prediction[0] == 0):
         #Non churner
         return "The Customer is likely to stay."
     else:
         #churner
         return "The Customer is likely to leave."
+    """
         
 def main():
-    #title
+    """#title
     st.title("ABC Multinational Bank")
     st.header("Customer churn predictor")
     #getting input from user
@@ -70,6 +72,9 @@ def main():
         result = predict([credit_score, country, gender, age, tenure, balance, products_number, credit_card, active_member, estimated_salary])
     #printing the result
     st.success(result)
+    """
+    sample = [[600, 1, 0, 35, 3, 20000.00, 2, 0, 1, 200000.00]]
+    print(predict(sample))
     
 if __name__ == '__main__':
     main()
