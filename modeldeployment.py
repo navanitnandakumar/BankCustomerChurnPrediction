@@ -12,7 +12,7 @@ import numpy as np
 
 
 #loading the saved model
-loaded_model = pickle.load(open('C:/Users/navan/Documents/BankCustomerChurnPrediction/final_model.sav', 'rb'))
+loaded_model = pickle.load(open('final_model.sav', 'rb'))
     
 #creating a function for prediction
 def predict(input_data):
