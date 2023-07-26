@@ -7,7 +7,7 @@ Created on Fri Jul 21 08:01:52 2023
 
 #importing required libraries
 import pickle
-#import streamlit as st
+import streamlit as st
 import numpy as np
 
 
@@ -21,17 +21,15 @@ def predict(input_data):
     #reshaping the array
     input_np_rs = input_np.reshape(1,-1)
     prediction = loaded_model.predict(input_np_rs)
-    return(prediction)
-    """if(prediction[0] == 0):
+    if(prediction[0] == 0):
         #Non churner
         return "The Customer is likely to stay."
     else:
         #churner
         return "The Customer is likely to leave."
-    """
         
 def main():
-    """#title
+    #title
     st.title("ABC Multinational Bank")
     st.header("Customer churn predictor")
     #getting input from user
@@ -45,9 +43,9 @@ def main():
         country = 2
     temp = st.selectbox("Gender",("Male","Female"))
     if(temp == "Male"):
-        gender = 0
-    else:
         gender = 1
+    else:
+        gender = 0
     age	= st.number_input("Age")
     tenure = st.number_input("Tenure")
     balance = st.number_input("Balance")
@@ -72,9 +70,6 @@ def main():
         result = predict([credit_score, country, gender, age, tenure, balance, products_number, credit_card, active_member, estimated_salary])
     #printing the result
     st.success(result)
-    """
-    sample = [[600, 1, 0, 35, 3, 20000.00, 2, 0, 1, 200000.00]]
-    print(predict(sample))
     
 if __name__ == '__main__':
     main()
