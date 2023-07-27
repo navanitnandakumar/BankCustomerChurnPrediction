@@ -33,7 +33,7 @@ def main():
     st.title("ABC Multinational Bank")
     st.header("Customer churn predictor")
     #getting input from user
-    credit_score = st.number_input("Credit score")
+    credit_score = st.number_input("Credit score", min_value=300, max_value=850)
     temp = st.selectbox("Country",("France","Germany","Spain"))
     if(temp == "France"):
         country = 0
@@ -46,10 +46,10 @@ def main():
         gender = 1
     else:
         gender = 0
-    age	= st.number_input("Age")
+    age	= st.number_input("Age", min_value=18)
     tenure = st.number_input("Tenure")
     balance = st.number_input("Balance")
-    products_number	 = st.number_input("Number of products")
+    products_number	 = st.number_input("Number of products", min_value=1)
     temp = st.radio("Does the customer have a credit card from the bank?",
                            ("Yes", "No"))
     if(temp == "Yes"):
