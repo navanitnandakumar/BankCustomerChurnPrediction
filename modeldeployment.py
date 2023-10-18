@@ -10,6 +10,8 @@ import pickle
 import streamlit as st
 import numpy as np
 
+#setting page title
+st.set_page_config(page_title = "ABC Multinational Bank", page_icon = ":bank:")
 
 #loading the saved model
 loaded_model = pickle.load(open('final_model.sav', 'rb'))
@@ -21,16 +23,21 @@ def predict(input_data):
     #reshaping the array
     input_np_rs = input_np.reshape(1,-1)
     prediction = loaded_model.predict(input_np_rs)
+    probablity = (loaded_model.predict_proba(input_np_rs)) * 100
     if(prediction[0] == 0):
         #Non churner
-        return "The Customer is likely to stay."
+        ret_str = '''Customer is likely to stay.  
+        Confidence: ''' + str(probablity)
     else:
         #churner
-        return "The Customer is likely to leave."
+        ret_str = '''Customer is likely to leave.  
+        Confidence: ''' + str(probablity)
+        
+    return ret_str
         
 def main():
     #title
-    st.title("ABC Multinational Bank")
+    st.title(":bank: ABC Multinational Bank")
     st.header("Customer churn predictor")
     #getting input from user
     credit_score = st.number_input("Credit score", min_value=300, max_value=850)
