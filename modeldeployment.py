@@ -23,16 +23,12 @@ def predict(input_data):
     #reshaping the array
     input_np_rs = input_np.reshape(1,-1)
     prediction = loaded_model.predict(input_np_rs)
-    probablity = (loaded_model.predict_proba(input_np_rs)) * 100
     if(prediction[0] == 0):
         #Non churner
-        ret_str = '''Customer is likely to stay.  
-        Confidence: ''' + str(probablity)
+        ret_str = "Customer is likely to stay"
     else:
         #churner
-        ret_str = '''Customer is likely to leave.  
-        Confidence: ''' + str(probablity)
-        
+        ret_str = "Customer is likely to leave" 
     return ret_str
         
 def main():
