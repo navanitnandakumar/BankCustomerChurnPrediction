@@ -1,5 +1,7 @@
 # BankCustomerChurnPrediction
 
+![image](https://github.com/navanitnandakumar/BankCustomerChurnPrediction/assets/56127564/00387d03-8065-4e7d-887a-fb374f935f9a)
+
 Churn prediction is the process of identifying which consumers are most likely to stop using a service or cancel their subscription. This is a critical
 factor for many businesses because acquiring new consumers costs more than retaining existing ones.
 
@@ -11,3 +13,4 @@ ABC Multinational Bank indicates which customers have left, stayed, or signed up
 
 
 Deployed app: https://bankcustomerchurnprediction-t2xuoxltd6.streamlit.app/
+Kaggle notebook: https://www.kaggle.com/code/navanitnandakumar/bank-customer-churn-analysis-prediction-87
