@@ -6,6 +6,8 @@ Kaggle notebook: https://www.kaggle.com/code/navanitnandakumar/bank-customer-chu
 
 ![image](https://github.com/navanitnandakumar/BankCustomerChurnPrediction/assets/56127564/00387d03-8065-4e7d-887a-fb374f935f9a)
 
+![all_charts](all_charts.png)
+
 Churn prediction is the process of identifying which consumers are most likely to stop using a service or cancel their subscription. This is a critical
 factor for many businesses because acquiring new consumers costs more than retaining existing ones.
 
